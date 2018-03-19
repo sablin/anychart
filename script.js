@@ -22,14 +22,14 @@ function create(){
         x = i*20;
         if(isNaN(result[i])){
             y = Math.round(Math.random()* 400);
-            alert('В вашем массиве присутствовали текстовые значения.' + result[i] + ' было заменено на случайное число' + y)
+            alert('В вашем массиве присутствовали текстовые значения. ' + result[i] + ' было заменено на случайное число ' + y)
         }else{
            y = result[i];
         }
 
-        stage.circle(x,y, 2).stroke('red');
+        stage.circle(x,400-y, 2).stroke('red');
         if(i>0){
-            grath.moveTo( x-20, result[i-1]).lineTo(x,y).stroke('red');
+            grath.moveTo( x-20, 400-result[i-1]).lineTo(x,400-y).stroke('red');
         }
         console.log('x'  + ' : ' + x + ', ' + 'y' + ':' + y);
          }
