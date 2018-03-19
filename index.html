@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="container">
+    <h1>Создание графика в плоскости XY</h1>
+    <label for="arr">Введите значения Y через запятую:</label>
+    <input id="arr" type="text">
+    <input type="button" value="Создать" id="create" class="create" onclick="create()">
+    <input id="clear" type="button" class="clear" value="Очистить" onclick="clear()">
+    <div id="stage-container" class="stage-container" ></div>
+    <script src="https://cdn.anychart.com/releases/8.1.0/js/graphics.min.js"></script>
+    <script src="script.js"></script>
+</div>
 
-
-<h1>Создание графика в плоскости xy</h1>
-<label for="arr">Введите значения y через запятую:</label>
-<input id="arr" type="text">
-<input type="button" value="Создать" onclick="create()">
-<input id="clear" type="button" value="Очистить" onclick="clear()">
-<div id="stage-container" style="width: 400px; height: 375px;"></div>
-<script src="https://cdn.anychart.com/releases/8.1.0/js/graphics.min.js"></script>
-<script src="script.js"></script>
 </body>
 </html>

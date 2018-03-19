@@ -1,0 +1,35 @@
+.container{
+    display: block;
+    margin:0 auto;
+    text-align: center;
+    width:600px;
+}
+.stage-container{
+    width: 400px;
+    height: 400px;
+    margin-top:20px;
+}
+input[type=button]{
+    padding: 10px 23px;
+    border: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    display: inline-block;
+    color: white;
+}
+input[type=button].create{
+     background-color: #8181ff;
+}
+input[type=button].create:disabled{
+    background-color: #8181ff5c;
+}
+input[type=button].clear{
+    background-color: #ff1e47;
+}
+input[type=text]{
+    display: block;
+    padding: 7px 5px;
+    width: 200px;
+    margin: 16px auto;
+    font-size: 19px;
+}
