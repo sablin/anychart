@@ -19,21 +19,21 @@ function create(){
     textY.fontSize(18);
     textY.fontWeight('bold');
     for(i=0; i<result.length; i++){
-        x = i*20;
-        if(isNaN(result[i])){
-            y = Math.round(Math.random()* 400);
-            alert('В вашем массиве присутствовали текстовые значения. ' + result[i] + ' было заменено на случайное число ' + y)
-        }else{
-           y = result[i];
+        if (isNaN(result[i])){  //останавливаем цикл если попадается не число
+            alert('В массиве могут быть только числа. Цикл был остановлен на элементе ' + result[i]);
+            break;
+        } else{
+            x = i*20;
+            y = result[i];
+            stage.circle(x,400-y, 2).stroke('red');
+            if(i>0){
+                grath.moveTo( x-20, 400-result[i-1]).lineTo(x,400-y).stroke('red');
+            }
+            console.log('x'  + ' : ' + x + ', ' + 'y' + ':' + y);
+        }
+        document.querySelector('#create').disabled = true;
         }
 
-        stage.circle(x,400-y, 2).stroke('red');
-        if(i>0){
-            grath.moveTo( x-20, 400-result[i-1]).lineTo(x,400-y).stroke('red');
-        }
-        console.log('x'  + ' : ' + x + ', ' + 'y' + ':' + y);
-         }
-    document.querySelector('#create').disabled = true;
 
 }
 document.getElementById('clear').addEventListener('click',function(){
